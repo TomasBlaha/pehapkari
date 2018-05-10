@@ -8,9 +8,17 @@ namespace App\Model\Document;
 class Pas implements DocumentInterface
 {
 
+	/** @var string */
+	private $identifier;
+
+	public function __construct(string $identifier)
+	{
+		$this->identifier = $identifier;
+	}
+
 	public function getIdentifier(): string
 	{
-		return $this->getIdentifier();
+		return $this->identifier;
 	}
 
 }

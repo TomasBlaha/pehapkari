@@ -21,18 +21,22 @@ class PassengerPresenter
 			'RUS0001',
 			null
 		);
-		$foreignBadPassangerwrong = new BadPassenger(
-			'Ivan Drago',
-			'RUS001',
-			null,
-			null
-		);
+
+		$nativeBadPassanger = new BadPassenger(
+		'Martin Chytrý',
+		'CZ009919385',
+		null,
+		null
+	);
+
 		$nativeBadPassanger = new BadPassenger(
 			'Martin Chytrý',
 			'CZ009919385',
-			null,
+			'pas',
 			null
 		);
+
+
 
 		$foreignGoodPassanger = new GoodPassenger(
 			'Ivan Drago',

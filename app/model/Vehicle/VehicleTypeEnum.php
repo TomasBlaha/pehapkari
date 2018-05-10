@@ -9,8 +9,8 @@ use Enum\AbstractEnum;
 class VehicleTypeEnum extends AbstractEnum
 {
 
-	const VEHICLE_TYPE_CAR = 'car';
-	const VEHICLE_TYPE_BIKE = 'bike';
-	const VEHICLE_TYPE_MOTORBIKE = 'motorbike';
+	public const VEHICLE_TYPE_CAR = 'car';
+	public const VEHICLE_TYPE_BIKE = 'bike';
+	public const VEHICLE_TYPE_MOTORBIKE = 'motorbike';
 
 }

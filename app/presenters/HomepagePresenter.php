@@ -4,16 +4,27 @@ declare(strict_types = 1);
 
 namespace App\Presenters;
 
+use App\Repository\Repository;
 use Nette;
 
 
 class HomepagePresenter extends Nette\Application\UI\Presenter
 {
 
+	private $repository;
+
+	public function __construct(
+		Repository $repository
+	)
+	{
+		parent::__construct();
+		$this->repository = $repository;
+	}
+
 	public function renderDefault()
 	{
 		/** @var \App\Offer\Offer $offers */
-		$offers = $repository->getOffers();
+		$offers = $this->repository->getOffers();
 
 		$bestOffers = [];
 
@@ -30,7 +41,7 @@ class HomepagePresenter extends Nette\Application\UI\Presenter
 	public function renderDetail()
 	{
 		/** @var \App\Offer\Offer $offers */
-		$offers = $repository->getOffers();
+		$offers = $this->repository->getOffers();
 
 		$bestOffers = [];
 
