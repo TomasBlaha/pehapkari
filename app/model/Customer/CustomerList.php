@@ -9,18 +9,12 @@ use Consistence\Type\Type;
 class CustomerList
 {
 
-	/** @var \App\Model\Customer\Customer[]  */
+	/** @var \App\Model\Customer\Customer[] */
 	private $items;
 
-	/**
-	 * @param \App\Model\Customer\Customer[] $items
-	 */
-	public function __construct(
-		array $items
-	)
+	public function __construct(array $items)
 	{
-		// @dodelat ukazku do ktere prepnes - pole int/string - VRATIT CUSTOMER :-)
-		Type::checkType($items, 'int[]|string[]');
+		Type::checkType($items, Customer::class . '[]');
 
 		$this->items = $items;
 	}

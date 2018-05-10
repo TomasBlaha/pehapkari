@@ -4,9 +4,9 @@ declare(strict_types = 1);
 
 namespace App\Model\Vehicle;
 
-use Consistence\Enum\Enum;
+use Enum\AbstractEnum;
 
-class VehicleTypeEnum extends Enum
+class VehicleTypeEnum extends AbstractEnum
 {
 
 	const VEHICLE_TYPE_CAR = 'car';

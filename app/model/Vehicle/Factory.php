@@ -10,7 +10,7 @@ class Factory
 	public function getCar(): StrictVehicle
 	{
 		return new StrictVehicle(
-			VehicleTypeEnum::get(VehicleTypeEnum::VEHICLE_TYPE_CAR)
+			new VehicleTypeEnum(VehicleTypeEnum::VEHICLE_TYPE_CAR)
 		);
 	}
 
